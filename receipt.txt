@@ -1,0 +1,44 @@
+Dear [firstname] [lastname],
+
+Your registration has been started.  If payment was due, it was also submitted to the BUCLD automated Credit Card processing system for the 45th Annual Boston University Conference on Language Development on November 5-8, 2020 (held remotely).
+
+BUCLD 45 is taking place online.
+
+TO COMPLETE YOUR REGISTRATION PROCEED TO WHOVA:
+
+https://whova.com/portal/registration/bucld_202010/
+
+THE REGISTRATION PASSWORD IS:
+
+virtualbucld45
+
+The conference proceedings will be published by Cascadilla Press in print and online with open access. Please ask your library to order the printed proceedings from this year and previous years! The full list is at www.cascadilla.com/bucld.html.
+
+Ordering your own copy of the proceedings is separate from registration. If you want a copy of the printed edition at 50% off, go to www.cascadilla.com/bucld.html before January 31, 2021 and enter BU45REG493 as a coupon code in the online shopping cart.
+
+Thank you,
+
+BUCLD
+96 Cummington Mall
+Room 246
+Boston, MA 02215
+langconf@bu.edu
+
+Your registrant information is as follows:
+
+Name: [firstname] [lastname]
+Email: [email]
+
+BUCLD Registration: [input_registration]
+
+Comments:
+[input_comments]
+
+If payment was due, the details will be below.
+
+==Payment Information==
+
+Credit Card: [cashier:cc_masked_number]
+Amount: $[cashier:charged_amount]
+Auth #: [cashier:auth_num]
+Nelnet ID: [cashier:nelnet_id]

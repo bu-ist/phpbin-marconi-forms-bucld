@@ -1,0 +1,26 @@
+<telegraph binding="late">
+  <!--Required Fields-->
+  <directive action="require" field="firstname" error="Please enter your first name." />
+  <directive action="require" field="lastname" error="Please enter your last name."/>
+  <directive action="require" field="email" format="email" error="Please enter your email."/>
+  <directive action="require" field="input_registration" error="Please indicate whether you are registering as a student."/>
+  <directive action="field" name="receipt_template" value="receipt.txt" />
+  <directive action="field" name="notification_template" value="notification.txt" />
+  <!--Calculate Total Price-->
+  <!--BUCLD Registration categories-->
+  <directive action="sum" add="[if?:input_registration==General Registration - $60.00:60:0]" total="total"/>
+  <directive action="sum" add="[if?:input_registration==Student Registration - $0.00:0:0]" total="total"/>
+  <directive action="sum" add="[if?:input_registration==General Preregistration - $45.00:45:0]" total="total"/>
+  <directive action="sum" add="[if?:input_registration==Student Preregistration - $0.00:0:0]" total="total"/>
+  <!--Nelnet - update is_test before launch-->
+  <!--directive special="nelnet" is_test="N" amount="[total:total]" order_type="CONF27"/>-->
+  <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
+  <!--File - update by deleting file with test data on server before launch-->
+  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,date-and-time" />
+  <!--Email Receipt/Notification - update to full distribution list before launch-->
+  <!--directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 45 Registration Notification" template="[notification_template]"> -->
+  <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 45 Registration Notification" template="[notification_template]"> -->
+  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 45 Registration Receipt" template="[receipt_template]" />
+  <!--Redirect Thank You Page-->
+  <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />
+</telegraph>

@@ -1,0 +1,18 @@
+This BUCLD 45 registration has been submitted, and sent to the Cashier's Office automated Credit Card processing system if payment was needed.
+
+Name: [firstname] [lastname]
+Email: [email]
+
+BUCLD Registration: [input_registration]
+
+Comments:
+ [input_comments]
+
+==Payment Information==
+
+Credit Card: [cashier:cc_masked_number]
+Amount: $[cashier:charged_amount]
+Auth #: [cashier:auth_num]
+Nelnet ID: [cashier:nelnet_id]
+
+View all registrant data at http://www.bu.edu/bucld/wp-assets/telegraph/output/results[timestamp:YYYY].csv
