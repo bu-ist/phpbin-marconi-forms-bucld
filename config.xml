@@ -14,13 +14,13 @@
   <directive action="sum" add="[if?:input_registration==Student Preregistration - $0.00:0:0]" total="total"/>
   <!--Nelnet - update is_test before launch-->
   <!--directive special="nelnet" is_test="N" amount="[total:total]" order_type="CONF27"/>-->
-  <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
+  <directive special="nelnet" is_test="Y" amount="[total:total]" order_type="CONF27"/>
   <!--File - update by deleting file with test data on server before launch-->
   <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,date-and-time" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
-  <!--directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 45 Registration Notification" template="[notification_template]"> -->
-  <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 45 Registration Notification" template="[notification_template]"> -->
-  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 45 Registration Receipt" template="[receipt_template]" />
+  <directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 46 Registration Notification" template="[notification_template]"> -->
+  <!--directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]"> -->
+  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Receipt" template="[receipt_template]" />
   <!--Redirect Thank You Page-->
   <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />
 </telegraph>
