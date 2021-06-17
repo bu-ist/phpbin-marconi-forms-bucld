@@ -12,9 +12,7 @@
   <directive action="sum" add="[if?:input_registration==Student Registration - $0.00:0:0]" total="total"/>
   <directive action="sum" add="[if?:input_registration==General Preregistration - $45.00:45:0]" total="total"/>
   <directive action="sum" add="[if?:input_registration==Student Preregistration - $0.00:0:0]" total="total"/>
-  <!--Nelnet - update is_test before launch-->
-  <!--directive special="nelnet" is_test="N" amount="[total:total]" order_type="CONF27"/>-->
-  <directive special="nelnet" is_test="Y" amount="[total:total]" order_type="CONF27"/>
+  <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
   <!--File - update by deleting file with test data on server before launch-->
   <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,date-and-time" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
