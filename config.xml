@@ -7,7 +7,7 @@
   <directive action="require" field="input_address_state" error="Please enter your state or N/A."/>
   <directive action="require" field="input_address_country" error="Please select your country."/>
   <directive action="require" field="email" format="email" error="Please enter your email."/>
-  <!--directive action="require" field="input_affiliation" error="Please enter your affiliation or write N/A."/-->
+  <directive action="require" field="input_role" error="Please enter your role (faculty, postdoc, etc.)."/-->
   <directive action="require" field="input_registration" error="Please select your BUCLD registration type."/>
   <directive action="require" field="input_generation" error="Please select whether you are a first-generation college student or check that you prefer not to respond.."/>
   <directive action="require" field="input_race_ethnicity" error="Please specify race/ethnicity or check prefer not to respond."/>
@@ -23,10 +23,10 @@
   <directive action="sum" add="[if?:input_registration==Student Preregistration - $0.00:0:0]" total="total"/>
   <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
   <!--File - update by deleting file with test data on server before launch-->
-  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,input_address_state,input_address_country,date-and-time,input_generation,input_race_ethnicity_list,input_disability_status_list,input_gender_list,input_sign_language_interpreter,input_comments" />
+  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,input_address_state,input_address_country,date-and-time,input_role,input_generation,input_race_ethnicity_list,input_disability_status_list,input_gender_list,input_sign_language_interpreter,input_comments" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
-  <directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 46 Registration Notification" template="[notification_template]"> -->
-  <!--directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]"> -->
+  <!--directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 46 Registration Notification" template="[notification_template]"> -->
+  <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]"> -->
   <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Receipt" template="[receipt_template]" />
   <!--Redirect Thank You Page-->
   <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />
