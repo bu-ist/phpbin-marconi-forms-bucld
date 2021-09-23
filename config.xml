@@ -23,7 +23,7 @@
   <directive action="sum" add="[if?:input_registration==Student Preregistration - $0.00:0:0]" total="total"/>
   <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
   <!--File - update by deleting file with test data on server before launch-->
-  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,input_address_state,input_address_country,date-and-time,input_role,input_generation,input_race_ethnicity_list,input_disability_status_list,input_gender_list,input_sign_language_interpreter,input_comments" />
+  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,input_address_state,input_address_country,date-and-time,input_role,input_generation,input_race_ethnicity,input_disability_status,input_gender,input_sign_language_interpreter,input_comments" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
   <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,ndarvish@bu.edu,jkellogg@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]">
   <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Receipt" template="[receipt_template]" />
