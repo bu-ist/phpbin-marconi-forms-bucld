@@ -25,8 +25,7 @@
   <!--File - update by deleting file with test data on server before launch-->
   <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_registration,input_address_state,input_address_country,date-and-time,input_role,input_generation,input_race_ethnicity,input_disability_status,input_gender,input_sign_language_interpreter,input_comments" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
-  <!--directive action="email" to="hagstrom@bu.edu" from="langconf@bu.edu" subject="TESTING - BUCLD 46 Registration Notification" template="[notification_template]"> -->
-  <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]"> -->
+  <directive action="email" to="fkpog001@bu.edu,yinggong@bu.edu,ndarvish@bu.edu,jkellogg@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Notification" template="[notification_template]">
   <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 46 Registration Receipt" template="[receipt_template]" />
   <!--Redirect Thank You Page-->
   <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />

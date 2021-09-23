@@ -15,4 +15,4 @@ Amount: $[cashier:charged_amount]
 Auth #: [cashier:auth_num]
 Nelnet ID: [cashier:nelnet_id]
 
-View all registrant data at http://www.bu.edu/bucld/wp-assets/telegraph/output/results[timestamp:YYYY].csv
+View all registrant data at https://www.bu.edu/phpbin/marconi/view.php?form_id=bucld&filename=results[timestamp:YYYY].csv
