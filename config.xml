@@ -85,7 +85,7 @@
   <directive action="sum" add="[if?:input_status==General registration:35:0]" quantity="[event_quantity]" total="total" />
   <directive action="sum" add="[if?:input_status==Postbacc Trainee registration:35:0]" quantity="[event_quantity]" total="total"  />
   <!--SLD registration categories-->
-  <directive action="sum" add="[if?:input_sld==General - $25.00:25:0]" total="total"/>
+  <directive action="sum" add="[if?:input_sld==General - $20.00:20:0]" total="total"/>
   <directive action="sum" add="[if?:input_sld==Student - $10.00:10:0]" total="total"/>
   <directive action="sum" add="[if?:input_sld==Not attending the SLD Symposium on Thursday - $0.00:0:0]" total="total"/>
   
