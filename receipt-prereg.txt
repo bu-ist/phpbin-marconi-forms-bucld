@@ -1,10 +1,12 @@
 Dear [firstname] [lastname],
 
-Your registration has been started.  If payment was due, it was also submitted to the BUCLD automated Credit Card processing system for the 46th Annual Boston University Conference on Language Development on November 3-6, 2022.
+Your registration and payment has been submitted to the BUCLD automated Credit Card processing system for the 47th Annual Boston University Conference on Language Development on November 3-6, 2022.
 
 The conference proceedings will be published by Cascadilla Press in print and online with open access. Please ask your library to order the printed proceedings from this year and previous years! The full list is at www.cascadilla.com/bucld.html .
 
 Ordering your own copy of the proceedings is separate from registration. If you want a copy of the printed edition at 50% off, go to www.cascadilla.com/bucld.html before January 31, 2023 and enter BU47REG735 as a coupon code in the online shopping cart.
+
+BUCLD is participating in the LSA Committee on Gender Equity in Linguistics (COGEL) Pop-up Mentoring Program.  For information on how to participate as a mentor or a mentee, please visit: https://www.bu.edu/bucld/conference-info/pump/ 
 
 
 Thank you,
@@ -19,13 +21,19 @@ Your registrant information is as follows:
 
 Name: [firstname] [lastname]
 Email: [email]
+Affiliation: [input_affiliation]
+Social media for badge: [input_twitter]
 
-BUCLD Registration: [input_registration]
+BUCLD Registration: [input_registration][newline?:input_student_workshop_thursday] [checked?:input_student_workshop_thursday][newline?:input_student_pizza_lunch] [checked?:input_student_pizza_lunch]
+
+SLD Registration: [input_sld]
 
 Comments:
-[input_comments]
+ [checked?:input_sign_language_interpreter]
+ [input_access_needs]
+ [input_comments]
 
-If payment was due, the details will be below.
+Payment details follow:
 
 ==Payment Information==
 
