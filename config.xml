@@ -27,45 +27,46 @@
   <!--We need to account for every permutation individually, no smart sums here-->
   <!--Values here must exactly match text on form (also goes on receipts)-->
   <!--Individual events price per, really just done for display on receipts, it is computed again later for summing-->
-  <directive action="field" name="individual_events_price" value="[if?:input_status==Student registration:10:25]" />
+  <!--removing Sunday symposioum from 2023 but retaining code for potential restoration in 2024-->
+  <directive action="field" name="individual_events_price" value="[if?:input_status==Student registration:20:35]" />
   <!--Event Quantity: single events-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote" target_field="event_quantity" target_value="1"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium" target_field="event_quantity" target_value="1"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address" target_field="event_quantity" target_value="1"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium" target_field="event_quantity" target_value="1"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium" target_field="event_quantity" target_value="1"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Single Session" target_field="event_quantity" target_value="1"/>
   <!--Event Quantity: pairs of events-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium" target_field="event_quantity" target_value="2"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address" target_field="event_quantity" target_value="2"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Sunday Symposium" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Single Session" target_field="event_quantity" target_value="2"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="2"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Single Session" target_field="event_quantity" target_value="2"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="2"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium, Single Session" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium, Single Session" target_field="event_quantity" target_value="2"/>-->
   <!--Event Quantity: triples of events-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="3"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="3"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="3"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Single Session" target_field="event_quantity" target_value="3"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium " target_field="event_quantity" target_value="3"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium " target_field="event_quantity" target_value="3"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="3"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="3"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="3"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="3"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="3"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="3"/>-->
   <!--Event Quantity: quadruples of events-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="4"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="4"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="4"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
   <!--Event Quantity: all events-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="5"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="5"/>-->
   <!--reset receipt and notification templates if one of the Pre-Registration options was used-->
-  <directive action="conditional-field" source_field="input_registration" source_value="General Preregistration - $195.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
-  <directive action="conditional-field" source_field="input_registration" source_value="Student Preregistration - $100.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
-  <directive action="conditional-field" source_field="input_registration" source_value="Postbacc Trainee Preregistation - $160.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
+  <directive action="conditional-field" source_field="input_registration" source_value="General Preregistration - $270.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
+  <directive action="conditional-field" source_field="input_registration" source_value="Student Preregistration - $165.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
+  <directive action="conditional-field" source_field="input_registration" source_value="Postbacc Trainee Preregistation - $230.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
   <directive action="conditional-field" source_field="input_registration" source_value="Not Attending BUCLD Events - $0.00" target_field="receipt_template" target_value="receipt-prereg.txt"/>
   <directive action="conditional-field" source_field="receipt_template" source_value="receipt-prereg.txt" target_field="notification_template" target_value="notification-prereg.txt"/>
   <!--Calculate Total Price-->
@@ -91,10 +92,10 @@
   
   <directive special="nelnet" amount="[total:total]" order_type="CONF27"/>
   <!--File - update by deleting file with test data on server before launch-->
-  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_affiliation,input_twitter,input_registration,input_select_day,individual_events_list,input_student_workshop_thursday,input_student_pizza_lunch,input_sld,input_address_state,input_address_country,input_role,input_generation,input_ethnicity,input_race_list,input_disability,input_disability_status,input_gender_list,input_sign_language_interpreter,input_access_needs,input_comments,date-and-time" />
+  <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_affiliation,input_pronouns,input_registration,input_status,input_select_day,input_attend,input_record,individual_events,input_student_workshop_thursday,input_student_pizza_lunch,input_sld,input_address_state,input_address_country,input_role,input_generation,input_ethnicity,input_race,input_disability,input_disability_status,input_gender,input_sign_language_interpreter,input_access_needs,input_comments,date-and-time" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
-  <directive action="email" to="parisgap@bu.edu,jkellogg@bu.edu,hayat777@bu.edu,bgarnica@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 47 Registration Notification" template="[notification_template]">
-  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 47 Registration Receipt" template="[receipt_template]" />
+  <directive action="email" to="hayat777@bu.edu,jupitara@bu.edu,michos@bu.edu,ocisse@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 48 Registration Notification" template="[notification_template]">
+  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 48 Registration Receipt" template="[receipt_template]" />
   <!--Redirect Thank You Page-->
   <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />
 </telegraph>
