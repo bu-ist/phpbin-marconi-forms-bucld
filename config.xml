@@ -27,39 +27,39 @@
   <!--We need to account for every permutation individually, no smart sums here-->
   <!--Values here must exactly match text on form (also goes on receipts)-->
   <!--Individual events price per, really just done for display on receipts, it is computed again later for summing-->
-  <!--removing Sunday symposioum from 2023 but retaining code for potential restoration in 2024-->
+  <!--removing Saturday symposioum from 2023 but retaining code for potential restoration in 2024-->
   <directive action="field" name="individual_events_price" value="[if?:input_status==Student registration:20:35]" />
   <!--Event Quantity: single events-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote" target_field="event_quantity" target_value="1"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium" target_field="event_quantity" target_value="1"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium" target_field="event_quantity" target_value="1"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address" target_field="event_quantity" target_value="1"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium" target_field="event_quantity" target_value="1"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium" target_field="event_quantity" target_value="1"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Single Session" target_field="event_quantity" target_value="1"/>
   <!--Event Quantity: pairs of events-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium" target_field="event_quantity" target_value="2"/>-->
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address" target_field="event_quantity" target_value="2"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Sunday Symposium" target_field="event_quantity" target_value="2"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Single Session" target_field="event_quantity" target_value="2"/>
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="2"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="2"/>-->
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Single Session" target_field="event_quantity" target_value="2"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="2"/>-->
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Single Session" target_field="event_quantity" target_value="2"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="2"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="2"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium, Single Session" target_field="event_quantity" target_value="2"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Sunday Symposium, Single Session" target_field="event_quantity" target_value="2"/>
   <!--Event Quantity: triples of events-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="3"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address" target_field="event_quantity" target_value="3"/>-->
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium" target_field="event_quantity" target_value="3"/>-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Single Session" target_field="event_quantity" target_value="3"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium " target_field="event_quantity" target_value="3"/>-->
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Single Session" target_field="event_quantity" target_value="3"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium " target_field="event_quantity" target_value="3"/>
   <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="3"/>
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="3"/>-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="3"/>
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="3"/>-->
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="3"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="3"/>
   <!--Event Quantity: quadruples of events-->
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium" target_field="event_quantity" target_value="4"/>-->
-  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="4"/>
+  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Single Session" target_field="event_quantity" target_value="4"/>-->
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
-  <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
+  <directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="4"/>-->
   <!--Event Quantity: all events-->
   <!--directive action="conditional-field" source_field="individual_events_list" source_value="Friday Keynote, Saturday Symposium, Saturday Plenary Address, Sunday Symposium, Single Session" target_field="event_quantity" target_value="5"/>-->
