@@ -1,4 +1,4 @@
-This BUCLD 47 registration has been submitted, and sent to the Cashier's Office automated Credit Card processing system if payment was needed.
+This BUCLD 48 registration has been submitted, and sent to the Cashier's Office automated Credit Card processing system if payment was needed.
 
 Name: [firstname] [lastname]
 Email: [email]
