@@ -22,7 +22,7 @@ Your registrant information is as follows:
 Name: [firstname] [lastname]
 Email: [email]
 Affiliation: [input_affiliation]
-Social media for badge: [input_twitter]
+Pronouns: [input_pronouns]
 
 BUCLD Registration: [input_registration] ([checked?:input_select_day])
  Individual events ($[individual_events_price] each): [list:input_individual_events][newline?:input_student_workshop_thursday] [checked?:input_student_workshop_thursday][newline?:input_student_pizza_lunch] [checked?:input_student_pizza_lunch]
