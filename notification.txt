@@ -2,10 +2,17 @@ This BUCLD 48 registration has been submitted, and sent to the Cashier's Office 
 
 Name: [firstname] [lastname]
 Email: [email]
+Affiliation: [input_affiliation]
+Pronouns: [input_pronouns]
 
-BUCLD Registration: [input_registration]
+BUCLD Registration: [input_registration] ([checked?:input_select_day])
+ Individual events ($[individual_events_price] each): [list:input_individual_events][newline?:input_student_workshop_thursday] [checked?:input_student_workshop_thursday][newline?:input_student_pizza_lunch] [checked?:input_student_pizza_lunch]
 
+SLD Registration: [input_sld]
+ 
 Comments:
+ [checked?:input_sign_language_interpreter]
+ [input_access_needs]
  [input_comments]
 
 ==Payment Information==
