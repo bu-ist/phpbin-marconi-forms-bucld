@@ -101,8 +101,8 @@
   <!--File - update by deleting file with test data on server before launch-->
   <directive action="file" filename="results[timestamp:YYYY].csv" format="csv" fields="firstname,lastname,email,input_affiliation,input_pronouns,input_registration,input_status,input_select_day,input_attend,input_record,individual_events_list,input_student_workshop_thursday,input_student_pizza_lunch,input_sld,input_address_state,input_address_country,input_role,input_generation,input_ethnicity,input_race,input_disability,input_disability_status,input_gender,input_sign_language_interpreter,input_access_needs,input_comments,date-and-time" />
   <!--Email Receipt/Notification - update to full distribution list before launch-->
-  <directive action="email" to="hayat777@bu.edu,jupitara@bu.edu,michos@bu.edu,ocisse@bu.edu,langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 48 Registration Notification" template="[notification_template]">
-  <directive action="email" to="[email],langconf@bu.edu" from="langconf@bu.edu" subject="BUCLD 48 Registration Receipt" template="[receipt_template]" />
+  <directive action="email" to="hayat777@bu.edu,jupitara@bu.edu,michos@bu.edu,ocisse@bu.edu,langconf@bu.edu" from="donotreply@bu.edu" subject="BUCLD 48 Registration Notification" template="[notification_template]">
+  <directive action="email" to="[email],langconf@bu.edu" from="donotreply@bu.edu" subject="BUCLD 48 Registration Receipt" template="[receipt_template]" />
   <!--Redirect Thank You Page-->
   <directive action="redirect" href="http://www.bu.edu/bucld/conference-info/registration/online/thanks/" />
 </telegraph>
